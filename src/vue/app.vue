@@ -6,7 +6,7 @@
       <router-link :to="{path: '/profile', query: {name: 'kebo', age: 18, height: 1.88}}">档案</router-link> -->
       <button @click="userClick">用户</button>
       <button @click="profileClick">档案</button>
-      <router-view></router-view>
+      <keep-alive exclude="profile,user"><router-view></router-view></keep-alive>
     </div>
 </template>
 
