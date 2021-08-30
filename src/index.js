@@ -5,6 +5,8 @@ const home = () =>import("./vue/home.vue")
 const about = () =>import("./vue/about.vue")
 const news = () =>import("./vue/news.vue")
 const mes = () =>import("./vue/mes.vue")
+const user = () =>import("./vue/user.vue")
+const profile = () =>import("./vue/profile.vue")
 
 Vue.use(VueRouter)
 
@@ -14,7 +16,9 @@ const routes = [
     children:[{path:"",component:news},
               {path:"news",component:news},
               {path:"mes",component:mes}]},
-    {path:"/about",component:about}
+    {path:"/about",component:about},
+    {path:"/user/:id",component:user},
+    {path:"/profile",component:profile}
 ];
 
 const router = new VueRouter({
